@@ -1,6 +1,6 @@
-module.exports = function(app) {
-	var movies = require('../controllers/moviesController');
+var movies = require('../controllers/moviesController');
 
+module.exports = function(app) {
 	app.route('/movies')
 		.get(movies.list_all_movies)
 		.post(movies.add_movie);

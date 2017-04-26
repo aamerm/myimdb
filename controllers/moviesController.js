@@ -1,3 +1,4 @@
+var model = require('../models/moviesModel');
 var mongoose = require('mongoose');
 var Movies = mongoose.model('movies');
 
@@ -57,15 +58,12 @@ exports.update_movie = function(req,res){
 			// we got data from Mongo.
 			// change it accordingly.
 			if(req.body.name !== undefined) {
-				// case where email needs to be updated.
 				data.name = req.body.name;
 			}
 			if(req.body.language !== undefined) {
-				// case where password needs to be updated
 				data.language = req.body.language;
 			}
 			if(req.body.year_released !== undefined) {
-				// case where password needs to be updated
 				data.year_released = req.body.year_released;
 			}
 			// save the data
